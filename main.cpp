@@ -1,6 +1,12 @@
-//
-// Created by SaiKM on 10/7/2023.
-//
+/*
+ * Copyright 2023 - Howard Community College All rights reserved; Unauthorized duplication prohibited.
+ * Name: Sai Matukumalli
+ * Program name: Planets Driver
+ * Date: 10/12/2023
+ * Program description: This driver is designed to test the planets class. It uses all methods in the class either
+ * via calls within the function or by explicitly calling them.
+ */
+
 #include <iostream>
 #include "main.h"
 #include "planet.h"
@@ -48,5 +54,6 @@ int main(){
     cout << *planet6;
     //11
     cout << "Thank you for using the planets class\n";
-    return 1;
+    
+    return 0;
 }
