@@ -44,7 +44,7 @@ void Planet::numberSetter(){
     } else if (name == "Neptune"){
         planetNumber = 8;
     } else {
-        planetNumber = -1;
+        planetNumber = 0;
     }
 }
 
@@ -80,7 +80,7 @@ h. Neptune – 14
     } else if (planetNumber == 8){
         numberOfMoons = 14;
     } else {
-        numberOfMoons = -1;
+        numberOfMoons = 0;
     }
 }
 
@@ -216,8 +216,8 @@ std::istream &operator>>(std::istream &is, Planet &p) {
  * Prints the data values of the object when fed directly to cout
  */
 ostream &operator<<(ostream &os, Planet &p){
-    os << "The planet's name is " << p.getName() << endl;
-    os << "It has " << p.getNumberOfMoons() << " moons\n\n";
+    os << "The planet " << p.getName() << " is planet number " << p.getPlanetNumber() << endl;
+    os << "It has " << p.getNumberOfMoons() << " moons.\n\n";
     return os;
 }
 
