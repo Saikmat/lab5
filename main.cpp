@@ -7,7 +7,6 @@
  */
 
 #include <iostream>
-#include "main.h"
 #include "planet.h"
 
 using namespace std;

@@ -3,14 +3,13 @@
  * Name: Sai Matukumalli
  * Program name: Planets
  * Program description: This planet class defines objects to store information about a planet. It can store the planet
- * name, the planet number from the sun, and the number of moons it has. It includes getters for all perameters but
+ * name, the planet number from the sun, and the number of moons it has. It includes getters for all parameters but
  * only a setter for the name, since the other information is updated using methods based on the name. It also includes
  * overrides for many of the common unary and binary operators to work with the object.
  */
 
 #include <iostream>
 #include <string>
-#include <unordered_map>
 #include "Planet.h"
 
 
@@ -179,13 +178,14 @@ Planet* Planet::operator++(){
  * Postfix operator to add one to the planet number and return the resulant planet's information
  */
 Planet* Planet::operator++(int){
-    this->planetNumber++;
+    Planet* original = new Planet(this->name);
+    planetNumber++;
     if(planetNumber > 8){
         planetNumber = 1;
     }
     this->nameFromNumber();
     this->moonSetter();
-    return this;
+    return original;
 }
 
 /*
