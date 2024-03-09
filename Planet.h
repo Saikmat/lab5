@@ -48,9 +48,9 @@ public:
 
     Planet* operator-();
 
-    Planet* operator++();
+    Planet & operator++();
 
-    Planet* operator++(int);
+    Planet operator++(int);
 
     Planet& operator=(Planet*);
 

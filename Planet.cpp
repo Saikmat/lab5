@@ -164,21 +164,21 @@ Planet* Planet::operator-(){
 /*
  * Prefix operator to add one to the planet number and return the resultant planet's information
  */
-Planet* Planet::operator++(){
+Planet & Planet::operator++(){
     this->planetNumber++;
     if(planetNumber > 8){
         planetNumber = 1;
     }
     this->nameFromNumber();
     this->moonSetter();
-    return this;
+    return *this;
 }
 
 /*
  * Postfix operator to add one to the planet number and return the resulant planet's information
  */
-Planet* Planet::operator++(int){
-    Planet* original = new Planet(this->name);
+Planet Planet::operator++(int){
+    Planet original = *this;
     planetNumber++;
     if(planetNumber > 8){
         planetNumber = 1;
